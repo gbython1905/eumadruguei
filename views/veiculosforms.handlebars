@@ -1,0 +1,19 @@
+<h1>Cadastrar Veículo</h1>
+<form action="/veiculosADD" method="post">        
+    <label for="modelo">Modelo</label>
+    <input type="text" name="modelo" id="modelo" required>
+
+    <label for="marca">Marca</label>
+    <input type="text" name="marca" id="marca" required>
+
+    <label for="placa">Placa</label>
+    <input type="text" name="placa" id="placa" required>
+
+    <label for="situacao">Situação</label>
+    <select name="situacaoID" id="situacao" required>
+        {{#each situacao}}
+            <option value="{{this.id}}">{{this.situacao}}</option>
+        {{/each}}
+    </select>
+    <button type="submit">Cadastrar Veículo</button>
+</form>
